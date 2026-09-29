@@ -1,0 +1,15 @@
+=== battery, integrated forced ===
+ gpuswitch            0
+ gpuswitch            1
+temperature	 power	 activity	 pciPowerState	2 
+TGDD=35.000 TGDF=42.980 TG0P=44.750 PG0R=0.119 
+temperature	 power	 activity	 pciPowerState	2 
+TGDD=35.000 TGDF=41.438 TG0P=44.375 PG0R=0.128 
+temperature	 power	 activity	 pciPowerState	2 
+TGDD=35.000 TGDF=40.234 TG0P=44.062 PG0R=0.129 
+=== ioreg accelerators ===
+      "IOClass" = "AMDRadeonX6000_AMDNavi14GraphicsAccelerator"
+      "IOClass" = "AMDRadeonX6000_AMDNavi14GraphicsAccelerator"
+      "IOClass" = "IntelAccelerator"
+=== GFX0 power ===
+      "IOPowerManagement" = {"ChildrenPowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=258,"ChildProxyPowerState"=2,"MaxPowerState"=3}

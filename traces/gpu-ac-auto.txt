@@ -1,0 +1,13 @@
+=== AC, gpuswitch auto (2/2), captured after the session; Radeon asleep at capture time ===
+Thu Sep 17 23:27:25 EEST 2026
+Now drawing from 'AC Power'
+ gpuswitch            2
+ gpuswitch            2
+temperature	
+power	
+activity	
+pciPowerState	2
+TG0P	sp78	2	2cf0	44.938
+TGDD	sp78	2	2300	35.000
+TGDF	sp78	2	239d	35.613
+PG0R	flt 	4	663cbb3d	0.091

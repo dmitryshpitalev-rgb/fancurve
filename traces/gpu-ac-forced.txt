@@ -1,0 +1,11 @@
+=== AC, gpuswitch forced ===
+ gpuswitch            2
+ gpuswitch            1
+temperature	51.000
+power	4.000
+activity	0.000
+pciPowerState	2
+TG0P	sp78	2	2f20	47.125
+TGDD	sp78	2	3300	51.000
+TGDF	sp78	2	32c7	50.777
+PG0R	flt 	4	96e61b41	9.744

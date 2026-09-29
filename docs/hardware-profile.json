@@ -1,0 +1,14 @@
+{
+  "model": "MacBookPro16,1",
+  "cpuTemps": ["TC0E", "TC0F", "TC0P", "TC1C", "TC2C", "TC3C", "TC4C", "TC5C", "TC6C", "TC7C", "TC8C", "TCGC", "TCMX", "TCSA", "TCXC"],
+  "gpuTemps": ["TG0P", "TGDD", "TGDF"],
+  "gpuIoregTemp": "ioreg.gpu.temp",
+  "chassisTemps": ["Ts0S", "Ts1S", "Ts2S"],
+  "cpuPower": "PC0R",
+  "gpuPower": "ioreg.gpu.power",
+  "gpuActiveRule": {"column": "PG0R", "above": 1.0},
+  "fanActual": ["F0Ac", "F1Ac"],
+  "fanMode": ["F0Md", "F1Md"],
+  "fanTarget": ["F0Tg", "F1Tg"],
+  "fans": [{"minRPM": 1836, "maxRPM": 5616}, {"minRPM": 1700, "maxRPM": 5200}]
+}

@@ -1,0 +1,26 @@
+=== battery, auto ===
+Now drawing from 'Battery Power'
+--- t+10s
+ gpuswitch            2
+temperature	50.000 power	7.000 activity	0.000 pciPowerState	2 
+TGDD=50.000 TGDF=51.379 TG0P=46.250 PG0R=7.206 PC0R=6.741 
+--- t+20s
+ gpuswitch            2
+temperature	50.000 power	6.000 activity	0.000 pciPowerState	2 
+TGDD=50.000 TGDF=51.355 TG0P=46.125 PG0R=7.031 PC0R=5.738 
+--- t+30s
+ gpuswitch            2
+temperature	50.000 power	7.000 activity	1.000 pciPowerState	2 
+TGDD=50.000 TGDF=51.316 TG0P=46.062 PG0R=7.053 PC0R=6.652 
+--- t+40s
+ gpuswitch            2
+temperature	52.000 power	11.000 activity	12.000 pciPowerState	2 
+TGDD=52.000 TGDF=51.797 TG0P=47.500 PG0R=12.407 PC0R=10.658 
+--- t+50s
+ gpuswitch            2
+temperature	53.000 power	12.000 activity	11.000 pciPowerState	2 
+TGDD=53.000 TGDF=52.402 TG0P=48.438 PG0R=11.944 PC0R=18.367 
+--- t+60s
+ gpuswitch            2
+temperature	54.000 power	6.000 activity	2.000 pciPowerState	2 
+TGDD=54.000 TGDF=53.406 TG0P=49.500 PG0R=12.271 PC0R=12.321 

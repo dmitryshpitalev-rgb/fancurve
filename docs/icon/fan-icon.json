@@ -1,0 +1,13 @@
+{
+  "viewBox": "0 0 100 100",
+  "discRadius": 30.0,
+  "fins": {
+    "count": 28,
+    "innerRadius": 34.0,
+    "outerRadius": 47.0,
+    "width": 3.2,
+    "slantDegrees": 10.0,
+    "ghostAlpha": 0.28
+  },
+  "litFinsPerLevel": [0, 6, 11, 17, 22, 28]
+}

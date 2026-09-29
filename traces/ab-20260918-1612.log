@@ -1,0 +1,50 @@
+==================================================================
+Expected duration: 37-66 min (the baseline waits for the chassis to settle).
+Keep the lid open. Do not plug in the charger. Do not use the laptop.
+A 5-second fan test runs at the start; the fans will be loud during the second load (load_max).
+==================================================================
+== phase 0: preconditions ok (battery 99%)
+F0Mx=5616.000 F1Mx=5200.000 F0Tg(stock)=1836.000 F1Tg(stock)=1700.000
+== preflight: testing forced max fan control
+assert_forced: attempt 1 ok (write rc=0,0,0,0; F0Md=1.000 F1Md=1.000 F0Tg=5616.000 F1Tg=5200.000)
+release confirmed: F0Md=0.000 F1Md=0.000
+preflight: forced max accepted (F0Tg=5616.000, F1Tg=5200.000) and released
+== phase 1: starting recorder
+recording 31 keys to traces/ab-20260918-1612.csv, Ctrl-C to stop
+recording to traces/ab-20260918-1612.csv (pid 52076), phases in traces/ab-20260918-1612.phases
+== phase 2: baseline (adaptive, 180-900 s)
+== baseline (battery 99%, Now drawing from 'Battery Power')
+baseline stabilised at t+215s, median of last 12: 40.5 C
+== phase 3: load_stock (2 threads, 720 s, fans stock)
+== load_stock (battery 97%, Now drawing from 'Battery Power')
+load_stock done
+== phase 4: cooldown (adaptive, 480-1500 s)
+== cooldown (battery 84%, Now drawing from 'Battery Power')
+cooldown converged at t+480s: bottom=36.621 C, TC0F=51.898 C
+== phase 5: load_max (2 threads, 720 s, fans forced to max)
+== load_max (battery 81%, Now drawing from 'Battery Power')
+assert_forced: attempt 1 ok (write rc=0,0,0,0; F0Md=1.000 F1Md=1.000 F0Tg=5616.000 F1Tg=5200.000)
+load_max done
+== phase 6: release
+release confirmed: F0Md=0.000 F1Md=0.000
+== phase 7: recovery (120 s idle, macOS control)
+== recovery (battery 65%, Now drawing from 'Battery Power')
+== end (battery 65%, Now drawing from 'Battery Power')
+== phase 8: stopping recorder
+CSV:    /Users/dmitryshpitalev/Projects/fancurve/.worktrees/plan-1-spike-and-core/traces/ab-20260918-1612.csv
+PHASES: /Users/dmitryshpitalev/Projects/fancurve/.worktrees/plan-1-spike-and-core/traces/ab-20260918-1612.phases
+== summary
+baseline (last 60s before load_stock, n=60): bottom=40.49 palm=35.00 PSTR=31.11
+
+phase      window       n   bottom     dbot   dstart    palm     die    PC0R    PSTR    F0Ac    F1Ac   gpu%    ac%
+load_stock 0-240      239    43.85     3.36     2.56   35.49   97.66   47.71   59.10 4691.59 4350.87     0%     0%
+load_stock 240-480    240    43.26     2.76     1.96   36.00   93.04   48.88   60.69 5577.85 5181.31     0%     0%
+load_stock 480-720    239    43.57     3.08     2.28   36.00   94.81   48.04   59.81 5618.77 5200.13     0%     0%
+load_max   0-240      239    37.20    -3.29     0.68   33.27   95.79   47.61   58.20 5617.98 5208.56     0%     0%
+load_max   240-480    239    38.66    -1.83     2.13   32.90   99.11   47.73   58.51 5614.74 5208.41     0%     0%
+load_max   480-720    238    39.01    -1.48     2.48   32.77   98.06   47.50   58.02 5614.30 5207.99     0%     0%
+
+load_stock: start_bottom=41.29 max_wall_gap=1.0s die_peak=100.96
+load_max: start_bottom=36.53 max_wall_gap=1.0s die_peak=100.01
+== done
+restored stock control
